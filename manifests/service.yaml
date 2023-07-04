@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: testworkflow-1688447983582
+  namespace: namespace-workflow-1688448012609
+spec:
+  type: LoadBalancer
+  selector:
+    app: testworkflow-1688447983582
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
