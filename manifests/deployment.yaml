@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testworkflow-1688460117604
+  labels:
+    app: testworkflow-1688460117604
+  namespace: namespace-workflow-1688460140161
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testworkflow-1688460117604
+  template:
+    metadata:
+      labels:
+        app: testworkflow-1688460117604
+    spec:
+      containers:
+        - name: testworkflow-1688460117604
+          image: testregistry1658574895204.azurecr.io/image-workflow-1688460140161:latest
+          ports:
+            - containerPort: 8000
