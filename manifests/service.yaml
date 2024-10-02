@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: testworkflow-1727912314520
+  namespace: namespace-workflow-1727912455267
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: testworkflow-1727912314520
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
